@@ -3,10 +3,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Test page</title>
+    <script type="text/javascript">
+        var urls = [
+            'https://www.utoronto.ca/',
+            'https://en.wikipedia.org/wiki/University_of_Toronto',
+        ];
+    
+        function redirect() {
+            var url = urls[Math.floor(Math.random()*urls.length)];
+            window.location = url; // redirect
+        }
+    </script>
 
 </head>
 
 <body>
-    <p>Test paragraph</p>
-    <p>Test paragraph 2 </p>
+    <h3>A/B test</h3>
+    <button type="button" onClick="redirect(); return false;">Click Me!</button>
 </body>
