@@ -1,16 +1,19 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Test page</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+
     <script type="text/javascript">
         var urls = [
             'https://www.utoronto.ca/',
             'https://en.wikipedia.org/wiki/University_of_Toronto',
         ];
-    
+
         function redirect() {
-            var url = urls[Math.floor(Math.random()*urls.length)];
+            var url = urls[Math.floor(Math.random() * urls.length)];
             window.location = url; // redirect
         }
     </script>
@@ -18,6 +21,48 @@
 </head>
 
 <body>
-    <h3>A/B test</h3>
-    <button type="button" onClick="redirect(); return false;">Click Me!</button>
+    <header>
+        <img src="logo.png" style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
+        <h2 style="text-align: center;">CSC2558: Topics in Multidisciplinary Human-Computer Interaction</h2>
+        <h4 style="text-align: center;">Research Survey</h4>
+    </header>
+
+    <div class="abstract">
+        <!-- <h2>Research Survey</h2> -->
+        <p style="font-size: 18px;"> Hi there! We are a group of students from the Department of Computer Science,
+            University of Toronto. We
+            would like to invite you to participate in our experiment for the course CSC2558: Topics in
+            Multidisciplinary Human-Computer Interaction. In this experiment, you will be presented with a web survey
+            regarding the topic of "Life in a Pandemic". To help you with the experiment, we've provided several
+            instructions below. Once you have finished reading them, please click the link below to start filling the
+            survey. Thank you very much for your participation!
+        </p>
+    </div>
+
+    <a href="#" onclick="redirect(); return false;">
+        <h2 style="text-align: center;">Click to start the survey!</h2>
+    </a>
+
+    <main>
+        <h2>Instructions</h2>
+        <ul style="font-size: 18px;">
+            <li>
+                We present two variants of the survey to perform A/B testing. Upon clicking the link above, you will be
+                randomly assigned and redirected to one of the surveys.
+            </li>
+            <li>
+                Once the survey page is loaded, please do not go back to this page as clicking the link again may lead
+                you to a different version of the survey.
+            </li>
+            <li>
+                Please do not re-attempt the survey once you have finished it.
+            </li>
+            <li>
+                If you have any further questions, please contact us at <a
+                    href="mailto:parul.saini@mail.utoronto.ca">parul.saini@mail.utoronto.ca</a>, <a
+                    href="mailto:pranav.gupta@mail.utoronto.ca">pranav.gupta@mail.utoronto.ca</a> and <a
+                    href="mailto:weiming.ren@mail.utoronto.ca">weiming.ren@mail.utoronto.ca</a>
+            </li>
+        </ul>
+    </main>
 </body>
